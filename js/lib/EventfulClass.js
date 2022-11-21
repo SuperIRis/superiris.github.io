@@ -1,0 +1,1 @@
+export default class EventfulClass{constructor(){this.events=[]}addEventListener(e,t){this.events.push({name:e,callback:t})}removeEventListener(t){this.events=this.events.filter(e=>e.name!==t)}removeAllEventListeners(){this.events.length=0}trigger(t,s){this.events.forEach(e=>e.name===t&&e.callback(s))}}
